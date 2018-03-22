@@ -1,5 +1,6 @@
+
 <div class="authform">
-  <h1 align="center" style="color:white;"> What Should I Eat </h1>
+  <h1 align="center"> What Should I Eat </h1>
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f| %>
     <h3>Sign in</h3>
     <%= devise_error_messages! %>
@@ -17,6 +18,9 @@
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
     </div>
+    <br>
+    <%= recaptcha_tags %>
+    <br>
       <%= f.submit 'Sign in', :class => 'button right' %>
       <% if devise_mapping.rememberable? -%>
         <div class="checkbox" style="width:150px">
@@ -26,4 +30,6 @@
         </div>
       <% end -%>
   <% end %>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </div>
+
