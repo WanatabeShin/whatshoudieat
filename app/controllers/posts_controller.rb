@@ -27,15 +27,15 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = current_user.posts.build(post_params)
-
     respond_to do |format|
-      if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
-      else
+      if !verify_recaptcha(model: @post) || !@post.save
         format.html { render :new }
         format.json { render json: @post.errors, status: :unprocessable_entity }
+      else
+        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.json { render :show, status: :created, location: @post }
       end
+
     end
   end
 
@@ -83,5 +83,4 @@ class PostsController < ApplicationController
         end
       end
     end
-      
 end
