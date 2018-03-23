@@ -69,7 +69,7 @@ img {
 .form-centered {
   @extend .col-md-6;
   @extend .text-center;
-  
+
   }
 .submit {
   @extend .btn;
@@ -97,14 +97,14 @@ section {
   padding-top: 30px;
   max-width: 350px;
   margin: 0 auto;
-  
+
 }
 .authform form {
   @extend .well;
   @extend .well-lg;
   padding-bottom: 40px;
   background-color: #F0B27A  ;
-  
+
 }
 .authform .right {
   float: right !important;
@@ -131,7 +131,7 @@ section {
 
 
 textarea {
-    width: 100%;
+    width: 65%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
