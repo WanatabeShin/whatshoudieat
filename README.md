@@ -4,5 +4,5 @@ What Should I Eat is a web application that
 store information about food recipes
 
 Users can register for an account, create and edit
-a food recipe posts, and browse through the list of food recipe posts
+food recipe posts, and browse through the list of food recipe posts
 made by other users.
